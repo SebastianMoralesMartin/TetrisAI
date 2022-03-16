@@ -1,6 +1,6 @@
 import pygame
 import random
-import tetris_ai
+import agenteTetris
 
 colors = [
     (0, 0, 0),
@@ -162,7 +162,7 @@ while not done:
         if game.state == "start":
             game.go_down()
 
-    for event in list(pygame.event.get()) + tetris_ai.run_ai(
+    for event in list(pygame.event.get()) + agenteTetris.ejecutar_Agente(
             game.field, game.figure, game.width, game.height
     ):
         if event.type == pygame.QUIT:
